@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { environment } from "../environments/environment";
 
 @Injectable()
 export class DataService {
@@ -15,7 +16,7 @@ export class DataService {
   }
 
   getDataObservable(): Observable<any> {
-    return this.http.get('http://demo7959174.mockable.io/')
+    return this.http.get(environment.dataUrl)
       .map(response => response.json());
   }
 
