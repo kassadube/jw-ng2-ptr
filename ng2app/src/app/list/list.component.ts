@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Item } from "../common/item";
 
 @Component({
   selector: 'app-list',
@@ -8,7 +9,7 @@ import { DataService } from '../data.service';
 })
 export class ListComponent implements OnInit {
 
-  list = [];
+  list: Item[];
 
   dataService = null;
 

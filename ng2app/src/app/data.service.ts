@@ -3,11 +3,12 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { environment } from "../environments/environment";
+import { Item } from "./common/item";
 
 @Injectable()
 export class DataService {
 
-  list = [];
+  list: Item[];
 
   constructor(private http: Http) { }
 
@@ -15,9 +16,12 @@ export class DataService {
     return this.list;
   }
 
-  getDataObservable(): Observable<any> {
+  getDataObservable(): Observable<Item[]> {
     return this.http.get(environment.dataUrl)
-      .map(response => response.json());
+      .map(response => response.json())
+      .map(items => items.map(item => {
+        return new Item(item.id, item.name);
+      }));
   }
 
 }
