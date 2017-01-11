@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 
+import { DataService } from './data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { DetailComponent } from './detail/detail.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
