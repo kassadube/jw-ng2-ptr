@@ -14,7 +14,7 @@ import { DetailComponent } from './detail/detail.component';
 
 import { DataService } from './data.service';
 
-describe('AppComponent', () => {
+fdescribe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [

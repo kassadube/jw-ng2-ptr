@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  dataUrl: 'http://demo7959174.mockable.io/'
+  dataUrl: 'http://demo7959174.mockable.io/,
+  logLevel: 'INFO''
 };
