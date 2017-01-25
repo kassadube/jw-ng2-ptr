@@ -1,11 +1,14 @@
 <div class="row">
-  <router-outlet name="top" class="col-xs-12"></router-outlet>
+
+<!--<app-header class="col-xs-12"></app-header>-->
+  <router-outlet name="appHeader" class="col-xs-12"></router-outlet>
 </div>
+
 <div class="row">
   <div class="col-xs-4 col-sm-3">
-    <router-outlet name="side" class="col-xs-12"></router-outlet>
+    <router-outlet name="appList"></router-outlet>
   </div>
   <div class="col-xs-8 col-sm-9">
-    <router-outlet name="center" class="col-xs-12"></router-outlet>
+   <router-outlet name="appDetail"></router-outlet>
   </div>
 </div>

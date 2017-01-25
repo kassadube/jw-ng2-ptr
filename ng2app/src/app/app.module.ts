@@ -3,18 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppRoutingModule, routingComponents } from './app.routes';
-
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 
 import { DataService } from './data.service';
-import { HomeComponent } from './home/home.component';
+
+import {AppRoutingModule, routingComponents} from './app.routes';
 
 
-@NgModule({
+@NgModule({  
   declarations: [
     AppComponent,
     HeaderComponent,
