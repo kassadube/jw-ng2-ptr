@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { AppRoutingModule, routingComponents } from './app.routes';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 
 import { DataService } from './data.service';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -16,13 +19,16 @@ import { DataService } from './data.service';
     AppComponent,
     HeaderComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    routingComponents,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
